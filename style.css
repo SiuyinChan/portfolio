@@ -1,0 +1,255 @@
+body {
+  background-color: #5552FF;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.navbar {
+  padding: 20px 0;
+}
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .navbar-container {
+    padding: 0 20px;
+  }
+}
+.navbar-nav-item {
+  padding-right: 15px;
+  cursor: pointer;
+}
+.navbar-nav-item:last-child {
+  padding-right: 0;
+}
+.navbar-nav a {
+  color: white;
+  text-decoration: none;
+}
+.navbar-nav a:hover {
+  opacity: 0.8;
+}
+
+.home {
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+  /* This container is needed to position the front and back side */
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  /* Position the front and back side */
+  /* Style the front side (fallback if image is missing) */
+  /* Style the back side */
+}
+.home-container {
+  font-size: 100px;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.home-container .presentation .hero {
+  margin: 30px 0;
+  color: white;
+  line-height: 0.98;
+}
+@media (min-width: 500px) and (max-width: 768px) {
+  .home-container .presentation .hero {
+    font-size: 150px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .home-container .presentation .hero {
+    font-size: 250px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .home-container .presentation .hero {
+    font-size: 350px;
+  }
+}
+@media (min-width: 1500px) {
+  .home-container .presentation .hero {
+    font-size: 500px;
+  }
+}
+.home-container .presentation .greeting {
+  margin: 65px 0;
+  font-size: 20px;
+  color: white;
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .home-container .presentation .greeting {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1500px) {
+  .home-container .presentation .greeting {
+    font-size: 30px;
+  }
+}
+.home-container .presentation .greeting .wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.home-container .presentation #typewriter {
+  display: inline-block;
+}
+.home-container .projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-container .projects-title h1 {
+  font-size: 5em;
+  font: bold 7.5vw/1.6 "JetBrains Mono", sans-serif;
+  user-select: none;
+}
+.home-container .projects-title h1 span {
+  display: inline-block;
+}
+.home-container .projects-title:hover span {
+  animation: bounce 0.6s;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: rotateX(20deg) translateY(2px) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(3deg) scale(1.1);
+  }
+}
+.home-container .projects-title span:nth-child(4n) {
+  color: #e2c636;
+  text-shadow: 1px 1px #c9ac1d, 2px 2px #a6953f, 3px 3px #a6953f, 4px 4px #c9ac1d;
+}
+.home-container .projects-title span:nth-child(4n-1) {
+  color: #64b478;
+  text-shadow: 1px 1px #4b9b5f, 2px 2px #4b9b5f, 3px 3px #4b9b5f, 4px 4px #4b9b5f;
+}
+.home-container .projects-title span:nth-child(4n-2) {
+  color: #75bd9f;
+  text-shadow: 1px 1px #609f85, 2px 2px #609f85, 3px 3px #609f85, 4px 4px #609f75;
+}
+.home-container .projects-title span:nth-child(4n-3) {
+  color: #db9957;
+  text-shadow: 1px 1px #b98046, 2px 2px #b98046, 3px 3px #b98046, 4px 4px #b98046;
+}
+.home-container .projects-title h1 span:nth-child(2) {
+  animation-delay: 0.05s;
+}
+.home-container .projects-title h1 span:nth-child(3) {
+  animation-delay: 0.1s;
+}
+.home-container .projects-title h1 span:nth-child(4) {
+  animation-delay: 0.15s;
+}
+.home-container .projects-title h1 span:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.home-container .projects-title h1 span:nth-child(6) {
+  animation-delay: 0.25s;
+}
+.home-container .projects-title h1 span:nth-child(7) {
+  animation-delay: 0.3s;
+}
+.home-container .projects-title h1 span:nth-child(8) {
+  animation-delay: 0.35s;
+}
+.home-container .projects-title h1 span:nth-child(9) {
+  animation-delay: 0.4s;
+}
+.home-container .projects-title h1 span:nth-child(10) {
+  animation-delay: 0.45s;
+}
+.home-container .projects-title h1 span:nth-child(11) {
+  animation-delay: 0.5s;
+}
+.home-container .projects-title h1 span:nth-child(12) {
+  animation-delay: 0.55s;
+}
+.home-container .projects-title h1 span:nth-child(13) {
+  animation-delay: 0.6s;
+}
+.home-container .projects-title h1 span:nth-child(14) {
+  animation-delay: 0.65s;
+}
+.home-container .projects .project-items-container .project-item {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 30px;
+  max-width: 1200px;
+  display: flex;
+}
+.home .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+.home .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.home .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.home .flip-card-front, .home .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+.home .flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.home .flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/*# sourceMappingURL=style.css.map */
