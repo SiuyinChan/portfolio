@@ -6,6 +6,10 @@ body {
 .navbar {
   padding: 20px 0;
 
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+
   &-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -38,6 +42,63 @@ body {
       &:hover {
         opacity: 0.8;
       }
+    }
+  }
+
+  .hamburger {
+    display: none;
+
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: white;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar-nav {
+      z-index: 1;
+      position: fixed;
+      left: -100%;
+      top: 108px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-nav.active {
+      left: 0;
+    }
+
+    .navbar-nav-item {
+      margin: 2.5rem 0;
+      color: black;
+    }
+
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
     }
   }
 }
@@ -377,9 +438,13 @@ body {
   }
 
   &-heading {
-    padding: 30px 50px;
+    padding: 30px 100px;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 401px) and (max-width:1000px)  {
+      padding: 30px 50px;
+    }
 
     @media (max-width: 400px) {
       padding: 20px 20px;
@@ -423,7 +488,7 @@ body {
 
     &-presentation {
       margin-top: 30px;
-      line-height: 1.3;
+      line-height: 1.5;
 
       @media (max-width: 475px) {
         font-size: 10px;
@@ -433,5 +498,220 @@ body {
 
   &-body {
     display: flex;
+    padding: 30px 100px;
+    display: flex;
+    line-height: 2;
+    flex-wrap: wrap;
+
+    @media (min-width: 401px) and (max-width:1000px)  {
+      padding: 30px 50px;
+    }
+
+    @media (max-width: 400px) {
+      padding: 20px 20px;
+    }
+
+    &-experience {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 65%;
+      align-items: center;
+      margin-right: 100px;
+
+      @media (max-width: 1526px) {
+        flex: 0 0 100%;
+      }
+
+      @media (max-width: 1518px){
+        margin-right: 0;
+      }
+
+      .date {
+        opacity: 0.5;
+      }
+
+      .title-span, .company {
+        font-weight: 1000;
+      }
+
+      .description {
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+
+      &-title {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 30px;
+
+        @media (min-width: 1200px) {
+          font-size: 30px;
+          font-weight: 700;
+        }
+      }
+
+      &-item {
+        margin-bottom: 40px;
+
+        @media (max-width: 475px) {
+          font-size: 10px;
+        }
+      }
+
+    }
+
+    &-education {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 250px;
+      flex: 0 0 35%;
+
+      @media (max-width: 1526px) {
+        flex: 0 0 100%;
+        max-width: 1800px;
+      }
+
+      &-title {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 30px;
+
+        @media (min-width: 1200px) {
+          font-size: 30px;
+          font-weight: 700;
+        }
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 30px;
+
+        @media (max-width: 475px) {
+          font-size: 10px;
+        }
+
+        .title-span {
+          font-weight: 1000;
+        }
+      }
+    }
+  }
+
+  &-download {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .button{
+    position:relative;
+    display:inline-block;
+    margin:20px;
+  }
+
+  .button a{
+    color:white;
+    font-family:Helvetica, sans-serif;
+    font-weight:bold;
+    font-size:36px;
+    text-align: center;
+    text-decoration:none;
+    background-color:#FFA12B;
+    display:block;
+    position:relative;
+    padding:20px 40px;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    @media (max-width: 678px){
+      font-size: 15px;
+    }
+  }
+
+  .button a:active{
+    top:10px;
+    background-color:#F78900;
+
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+    box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+  }
+
+  .button:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+}
+
+.footer {
+  font-family: 'Avenir Next', sans-serif;
+  margin: 100px 0;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &-title {
+    font-weight: 600;
+    font-size: 26px;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-left: 10px;
+    }
+  }
+  //
+  //&-desc {
+  //  text-align: center;
+  //}
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 42px;
+    width: 220px;
+    margin-top: 20px;
+
+    a {
+      color: #191b1e;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.5;
+        transform: scale(1.05);
+      }
+    }
   }
 }
