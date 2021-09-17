@@ -276,7 +276,7 @@ body {
   width: 300px;
   aspect-ratio: 1200/830.766;
   perspective: 1000px;
-  margin: 40px 20px;
+  margin: 40px auto;
 }
 @media (min-width: 1000px) {
   .home-container .projects .project-items-container .project-item .flip-card {
